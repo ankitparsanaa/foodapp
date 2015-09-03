@@ -17,9 +17,6 @@ $cart_link = get_permalink($cart_page_id);
             <div class="col-md-12">
 
                 <!-- Nav tabs -->
-
-
-
                 <div class="fond" data-ng-if="showLoader">
                     <div class="contener_general">
                         <div class="contener_mixte"><div class="ballcolor ball_1">&nbsp;</div></div>
