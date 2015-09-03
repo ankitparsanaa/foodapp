@@ -1149,6 +1149,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 
 .woocommerce-page .page-content .news-events-blog .blog-post p {
     padding:0 0;
+    margin-bottom: 15px;
 }
 
 /* Footer */
@@ -6143,7 +6144,7 @@ em {
 }
 
 abbr {
-    border-bottom: 1px dotted #666 !important;
+    /*border-bottom: 1px dotted #666 !important;*/
 }
 
 big {
@@ -7809,4 +7810,8 @@ ins {
 .woocommerce-cart .wc-proceed-to-checkout a.checkout-button {
     padding: 14px 0px !important;
     text-transform: uppercase
+}
+
+#place_order {
+    padding: 14px 30px !important;
 }
