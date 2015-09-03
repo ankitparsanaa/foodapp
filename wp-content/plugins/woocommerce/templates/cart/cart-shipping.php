@@ -98,8 +98,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			?>
 		<?php endif; ?>
 
-		<?php if ( is_cart() ) : ?>
-			<?php woocommerce_shipping_calculator(); ?>
-		<?php endif; ?>
+		<?php //if ( is_cart() ) : ?>
+			<?php //woocommerce_shipping_calculator(); ?>
+		<?php //endif; ?>
 	</td>
 </tr>

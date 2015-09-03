@@ -3166,7 +3166,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 }
 
 #main-wrapper .all-menu-details .single-menu .details h6 {
-    padding: 5px 0 10px 0;
+    padding: 5px 0 20px 0;
     margin: 0;
     font-size: 30px;
     text-align: left;
@@ -3174,7 +3174,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 }
 
 #main-wrapper .all-menu-details .single-menu .details h6:before {
-    content: '';
+    background: none;
 }
 
 #main-wrapper .all-menu-details .single-menu .details p{ line-height: 20px; }
@@ -5702,7 +5702,7 @@ h5 a:hover { color: #666; }
 }
 
 .shipping_calculator .shipping-calculator-button {
-    font-size: .5em;
+    font-size: .4em;
 }
 
 .wc-forward, .button{
@@ -6018,7 +6018,6 @@ a.sort-by-arrow {
 
 .cart_totals table tr th {
     padding-left: 10px !important;
-    background: #ddd;
     color: #333;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -6028,7 +6027,11 @@ a.sort-by-arrow {
     padding: 5px 15px;
     background: #e84a5f;
     color: #fff;
-    border-radius: 7px;
+    border-radius: 0px;
+}
+
+.shipping_calculator h2 {
+    margin-top: 0px;
 }
 
 select {
@@ -7796,4 +7799,14 @@ ins {
     color: #fff;
     font-size: 46px;
     text-transform: uppercase;
+}
+
+.shop_table thead {
+    background-color: #D5514D;
+    color: #fff;
+}
+
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button {
+    padding: 14px 0px !important;
+    text-transform: uppercase
 }
