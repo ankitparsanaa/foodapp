@@ -109,7 +109,7 @@ global $woocommerce;
                                 </div>
                             <?php } ?>
                             <?php if ($takeaway_option_data['takeaway-minicart-switch'] == 1) : ?>
-                                <div class="col-md-5 col-sm-8 col-xs-5 pull-right">
+                                <div class="col-md-4 col-sm-8 col-xs-5 pull-right">
                                     <?php include(locate_template('login.php')); ?>
                                     <span class="cart-contents pull-right"  title="<?php _e('View your shopping cart', 'takeaway'); ?>">
                                         <?php _e('Cart ', 'takeaway'); ?>
