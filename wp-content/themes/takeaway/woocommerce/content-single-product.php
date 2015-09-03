@@ -1,5 +1,3 @@
-
-
 <?php
 /**
  * The template for displaying product content in the single-product.php template
@@ -12,10 +10,7 @@
  */
 if (!defined('ABSPATH'))
     exit; // Exit if accessed directly
-
 global $product, $woocommerce_loop;
-
-
 if (is_product()) {
     add_filter('wc_product_sku_enabled', '__return_false');
 }
@@ -44,7 +39,7 @@ if (is_product()) {
                         <!-- <h5>Daily Menu</h5> -->
                         <div class="single-menu">
                             <div class="list-image">
-                                <img class="a-cat-tag" src="<?php get_stylesheet_directory_uri(); ?>/wp-content/uploads/img/veg-tag.png">
+                                <img class="a-single-tag" src="<?php echo content_url(); ?>/uploads/img/veg-tag.png">
                                 <?php
                                 /**
                                   it is showing the image
@@ -115,7 +110,7 @@ if (is_product()) {
                                     <!-- end .price-option-->
                                     <div class="qty-cart variable-product text-center clearfix <?php echo $class_product; ?>">
                                         <?php if ($product->product_type != 'variable' && $product->product_type != 'grouped') { ?>
-                                            <h6>Qty</h6>
+                                            <!--h6>Qty</h6-->
                                         <?php } ?>
                                         <?php //_log($product->product_type);    ?>
                                         <form class="cart" method="post" enctype='multipart/form-data'>
@@ -131,7 +126,7 @@ if (is_product()) {
                                             ?>
                                             <input type="hidden" name="add-to-cart" value="<?php echo esc_attr($product->id); ?>" />
                                             <?php if ($product->product_type != 'variable' && $product->product_type != 'grouped') { ?>
-                                                <button type="submit" class="single_add_to_cart_button button alt"><i class="fa fa-shopping-cart"></i></button>
+                                                <button type="submit" class="single_add_to_cart_button button alt"><i class="fa fa-shopping-cart"></i>ADD TO CART</button>
                                             <?php } //do_action( 'woocommerce_after_add_to_cart_button' );    ?>
                                         </form>
                                     </div>
