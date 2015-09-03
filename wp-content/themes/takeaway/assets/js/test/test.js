@@ -1,0 +1,1 @@
+!function(e){e("#meta_box_1").hide(),"chef.php"==e("#page_template").find(":selected").val()?e("#meta_box_1").show():e("#meta_box_1").hide(),e("#page_template").change(function(){"chef.php"==e(this).find(":selected").val()?e("#meta_box_1").show():e("#meta_box_1").hide()})}(jQuery);

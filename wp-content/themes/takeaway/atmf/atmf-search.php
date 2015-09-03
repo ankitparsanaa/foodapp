@@ -17,29 +17,35 @@ global $takeaway_option_data;
 
     <div class="mega-call-us">
         <div class="container">
-            <div class="call-mega-us">
-                <i class="fa fa-phone-square"></i>
-                <?php
-                if (isset($takeaway_option_data['takeaway-phone']) && !empty($takeaway_option_data['takeaway-phone'])) :
-                    ?>
-                    <p><?php _e('Call Us: ', 'takeaway'); ?><?php echo esc_attr($takeaway_option_data['takeaway-phone']); ?></p>
+            <div class="col-md-4 col-sm-4">
+                <div class="call-mega-us ta-center">
+                    <i class="fa fa-phone-square"></i>
+                    <?php
+                    if (isset($takeaway_option_data['takeaway-phone']) && !empty($takeaway_option_data['takeaway-phone'])) :
+                        ?>
+                        <p><?php _e('Call Us: ', 'takeaway'); ?><?php echo esc_attr($takeaway_option_data['takeaway-phone']); ?></p>
 
-                <?php endif; ?>
+                    <?php endif; ?>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <h2 class="a-menu-title">Our Cuisine</h2>
             </div>
             <?php
             $time1 = date("H", strtotime($takeaway_option_data['takeaway-avability']));
             $time2 = date("H", strtotime($takeaway_option_data['closes-at']));
             $hour = date("H");
             ?>
-
-            <div class="open-now text-right">
-                <?php if ($hour > $time1 && $hour < $time2) : ?>
-                    <i class="fa fa-check-square"></i>
-                    <p><?php _e('We are open now', 'takeaway'); ?>(<?php echo esc_attr($takeaway_option_data['takeaway-avability']); ?>-<?php echo esc_attr($takeaway_option_data['closes-at']); ?>)</p>
-                <?php else : ?>
-                    <i class="fa fa-square"></i>
-                    <p><?php _e('We are close now', 'takeaway'); ?></p>
-                <?php endif; ?>
+            <div class="col-md-4 col-sm-4">
+                <div class="open-now ta-center">
+                    <?php if ($hour > $time1 && $hour < $time2) : ?>
+                        <i class="fa fa-check-square"></i>
+                        <p><?php _e('We are open now', 'takeaway'); ?>(<?php echo esc_attr($takeaway_option_data['takeaway-avability']); ?>-<?php echo esc_attr($takeaway_option_data['closes-at']); ?>)</p>
+                    <?php else : ?>
+                        <i class="fa fa-square"></i>
+                        <p><?php _e('We are close now', 'takeaway'); ?></p>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
     </div>

@@ -2561,11 +2561,12 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 #main-wrapper .mega-call-us .open-now .fa {
     font-size: 56px;
     color: #80c200;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-
-
+#main-wrapper .mega-call-us .open-now p {
+    font-size: 22px;
+}
 
 /* all menu details */
 #main-wrapper .all-menu-details {
@@ -7767,4 +7768,11 @@ ins {
 .page-content .alert {
     margin-top: 20px !important;
     text-align: center;
+}
+
+.a-menu-title {
+    text-align: center;
+    color: #fff;
+    font-size: 46px;
+    text-transform: uppercase;
 }
