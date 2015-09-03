@@ -60,10 +60,10 @@ global $woocommerce;
                 <div class="header-top-bar">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-5 col-sm-9 col-xs-7">
-                                <?php include(locate_template('login.php')); ?>
+                            <!--div class="col-md-3 col-sm-9 col-xs-7">
+                               
                                 <!-- end .header-login -->
-                                <!-- Header Social -->
+                                <!-- Header Social >
                                 <ul class="header-social">
                                     <li>
                                         <a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?> "><i class="fa fa-facebook-square"></i></a>
@@ -78,8 +78,8 @@ global $woocommerce;
                                         <a href="https://pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&amp;media=<?php echo urlencode(get_the_title()); ?>"><i class="fa fa-pinterest-square"></i></a>
                                     </li>
                                 </ul>
-                            </div>
-                            <?php if (!is_page_template('atmf-search.php') || (get_post_meta($post->ID, '_atmf_meta_box_show_mega_call', true) == -1)) { ?>
+                            </div-->
+                            <?php if ((get_post_meta($post->ID, '_atmf_meta_box_show_mega_call', true) == -1)) { ?>
                                 <div class="col-md-5 col-sm-3 col-xs-6 hide-contentresponsive">
                                     <p class="call-us">
                                         <?php if (isset($takeaway_option_data['takeaway-phone']) && !empty($takeaway_option_data['takeaway-phone'])) : ?>
@@ -109,13 +109,16 @@ global $woocommerce;
                                 </div>
                             <?php } ?>
                             <?php if ($takeaway_option_data['takeaway-minicart-switch'] == 1) : ?>
-                                <div class="col-md-2 col-sm-3 col-xs-5 pull-right">
+                                <div class="col-md-5 col-sm-8 col-xs-5 pull-right">
+                                    <?php include(locate_template('login.php')); ?>
                                     <span class="cart-contents pull-right"  title="<?php _e('View your shopping cart', 'takeaway'); ?>">
-                                        <?php //echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?> 
                                         <?php _e('Cart ', 'takeaway'); ?>
+                                        <?php if ($woocommerce->cart->cart_contents_count != 0) { ?>
+                                            <?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count); ?> 
+                                        <?php } ?>
                                         <?php if (class_exists('Woocommerce')) : ?>
-                                            <?php //$takeaway_total = $woocommerce->cart->get_cart_total();  ?>
-                                            <?php //_e($takeaway_total, 'takeaway'); ?>
+                                            <?php $takeaway_total = $woocommerce->cart->get_cart_total(); ?>
+                                            <?php _e($takeaway_total, 'takeaway'); ?>
                                         <?php endif; ?>
                                     </span>
                                     <div id="mini-cart"></div>
@@ -170,7 +173,7 @@ global $woocommerce;
                 <!--div class="small-menu">
                     <div class="container">
                         <ul class="list-unstyled list-inline">
-                            <?php takeaway_breadcrumbs(); ?>
+                <?php takeaway_breadcrumbs(); ?>
                         </ul>
                     </div>
                 </div-->
