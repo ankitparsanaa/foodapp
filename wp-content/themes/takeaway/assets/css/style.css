@@ -2666,11 +2666,12 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
     display: block;
     width: 90px;
     height: 5px;
-    background: url('../images/arrow-motif.png') no-repeat center center;
+    background: url('../img/arrow-motif.png') no-repeat center center;
     position: absolute;
     margin-left: -45px;
-    bottom: -20px;
+    bottom: 0px;
     left: 50%;
+    top: 75px;
 }
 
 #main-wrapper .all-menu-details .details h6:hover a {
@@ -3143,7 +3144,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
     padding-bottom: 5px;
 }
 
-#main-wrapper .all-menu-details .single-menu .all-details .share-this { top: 40px; }
+#main-wrapper .all-menu-details .single-menu .all-details .share-this { top: 36px; }
 
 #main-wrapper .all-menu-details .single-menu .all-details .visible-option {
     position: relative;
@@ -3195,9 +3196,8 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
     left: 0;
     margin: 0;
     padding: 20px 0;
-    width: 46%;
+    width: 50%;
     height: 70px;
-
     font-weight: bold;
 }
 
@@ -3297,7 +3297,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
     bottom: 0px;
     right: 0%;
     padding-top: 10px;
-    width: 46%;
+    width: 50%;
     height: 70px;
     text-align: center;
     border-right: 0;
@@ -5675,7 +5675,7 @@ h5 a:hover { color: #666; }
 }
 
 .woocommerce-page .quantity input.qty {
-        width: 70px !important;
+    width: 70px !important;
     height: 45px;
     border: 2px solid rgba(0, 0, 0, 0.15);
 }
@@ -7708,6 +7708,7 @@ ins {
     overflow: hidden;
     text-align: center;
     font-size: 14px;
+    margin-top: 25px;
 }
 
 .a-grid-content span{
