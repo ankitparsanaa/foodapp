@@ -24,7 +24,6 @@ global $takeaway_option_data;
                     if (isset($takeaway_option_data['takeaway-phone']) && !empty($takeaway_option_data['takeaway-phone'])) :
                         ?>
                         <p><?php _e('Call Us: ', 'takeaway'); ?><?php echo esc_attr($takeaway_option_data['takeaway-phone']); ?></p>
-
                     <?php endif; ?>
                 </div>
             </div>
@@ -40,7 +39,7 @@ global $takeaway_option_data;
                 <div class="open-now ta-center">
                     <?php if ($hour > $time1 && $hour < $time2) : ?>
                         <i class="fa fa-check-square"></i>
-                        <p><?php _e('We are open now', 'takeaway'); ?>(<?php echo esc_attr($takeaway_option_data['takeaway-avability']); ?>-<?php echo esc_attr($takeaway_option_data['closes-at']); ?>)</p>
+                        <p><?php _e('We are open now', 'takeaway'); ?> (<?php echo esc_attr($takeaway_option_data['takeaway-avability']); ?>-<?php echo esc_attr($takeaway_option_data['closes-at']); ?>)</p>
                     <?php else : ?>
                         <i class="fa fa-square"></i>
                         <p><?php _e('We are close now', 'takeaway'); ?></p>
